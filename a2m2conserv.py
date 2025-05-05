@@ -117,7 +117,7 @@ plt.close()
 
 print(f"Plot saved to: {output_plot_path}")
 
-# === PLOT STRIP HEATMAP FOR CONSERVATION ONLY ===
+# === PLOT overall HEATMAP FOR CONSERVATION ONLY ===
 # Prepare data: 2D array with shape (1, N positions)
 conservation_data = df[['conservation']].T  # shape: (1, alignment_length)
 
@@ -144,7 +144,7 @@ ax.set_xticks(np.arange(len(positions)) + 0.5)  # positions centered
 ax.set_xticklabels(positions, rotation=45, ha='center', fontsize=10)
 
 plt.tight_layout()
-strip_plot_path = output_plot_path.replace(".png", "_strip.png")
+strip_plot_path = output_plot_path.replace(".png", "_overall.png")
 plt.savefig(strip_plot_path, dpi=300, bbox_inches='tight')
 plt.close()
 
