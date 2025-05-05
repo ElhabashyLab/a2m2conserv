@@ -9,11 +9,11 @@ import matplotlib.pyplot as plt
 
 # === CONFIGURATION ===
 # Paths for input MSA file and output files (CSV and plot image)
-msa_path = "/media/elhabashy/Elements/collaboration/Andrei_project/ARCFU/evcomplex/msa/Y1502_ARCFU_1-68_b0.3/align/Y1502_ARCFU_1-68_b0.3.a2m"
+msa_path = "<path to .a2m file"
 msa_format = "fasta"
 
-output_csv_path = "/media/elhabashy/Elements/collaboration/Andrei_project/ARCFU/plots/conservation_with_frequencies_fixed.csv"
-output_plot_path = "/media/elhabashy/Elements/collaboration/Andrei_project/ARCFU/plots/conservation_with_frequencies2.png"
+output_csv_path = "<path csv output file>.csv"
+output_plot_path = "<path png output file>.png"
 
 # === LOAD MSA ALIGNMENT ===
 # Read the alignment file in FASTA format
