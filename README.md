@@ -1,23 +1,25 @@
+
 # a2m2conserv
-This script performs conservation analysis on a multiple sequence alignment (MSA) and generates visualizations and output files for further analysis. It calculates conservation scores for each position in the alignment based on the Shannon entropy of residue frequencies and visualizes the results through heatmaps.
+This script calculates conservation scores for each position in a multiple sequence alignment (MSA) in the **a2m format**. It uses **Shannon entropy** to evaluate residue frequency distributions and visualizes the results through: a heatmap of per-position conservation scores and a heatmap of Amino acid propensities at each alignment position. Positions that are mostly gaps (i.e., columns with fewer than 6 amino acids) are penalized and assigned a conservation score of 0.
 
 # Usage
-To run the script, make sure to replace the file paths for msa_path, output_csv_path, and output_plot_path with your actual paths. Then, simply execute the script:
+To run the script, make sure to replace the file paths for msa_path, output_csv_path, and output_plot_path with your actual paths. 
+Then, simply execute the script:
 > python3 a2m2conserv.py
 
 # Requirements
 Before running this script, you need to install the following libraries:
-Biopython: For handling sequence alignments.
-NumPy: For numerical computations.
-Pandas: For data manipulation and saving results.
-Seaborn: For creating heatmaps and visualizations.
-Matplotlib: For plotting and saving the heatmap images.
+- Biopython: For handling sequence alignments.
+- NumPy: For numerical computations.
+- Pandas: For data manipulation and saving results.
+- Seaborn: For creating heatmaps and visualizations.
+- Matplotlib: For plotting and saving the heatmap images.
 
 You can install these dependencies using pip:
 > pip install biopython numpy pandas seaborn matplotlib
 
 # Input
-MSA (Multiple Sequence Alignment) File: The script requires an MSA file in FASTA format to analyze. The path to this file should be specified in the msa_path variable.
+MSA (Multiple Sequence Alignment) File with a2m format: The script requires an MSA file in FASTA format to analyze. The path to this file should be specified in the msa_path variable.
 
 Example:
 msa_path = "/path/to/your/alignment.a2m"
